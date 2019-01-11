@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: gazzur/gatsby-site
   branch: master # Branch to update (optional; defaults to master)
 # These lines should *not* be indented
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
