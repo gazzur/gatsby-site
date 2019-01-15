@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
+import Postpic from '../components/postpic'
 
 
 export default ({ data }) => {
@@ -20,7 +21,8 @@ export const query = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
-        title
+        title,
+        thumbnail
       }
     }
   }
