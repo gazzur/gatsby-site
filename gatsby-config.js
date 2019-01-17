@@ -12,7 +12,8 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
-    },    
+    },
+    `gatsby-plugin-netlify-cms-paths`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -35,7 +36,14 @@ module.exports = {
         name: "markdown-pages",
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-plugin-netlify-cms-paths`,
+        ],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
