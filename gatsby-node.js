@@ -14,19 +14,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  const { frontmatter } = node
-  if (frontmatter) {
-    const { thumbnail } = frontmatter
-    if (thumbnail) {
-      if (thumbnail.indexOf('/images/uploads') === 0) {
-        frontmatter.thumbnail = path.relative(
-          path.dirname(node.fileAbsolutePath),
-          path.join(__dirname, '/static/images/uploads', thumbnail)
-        )
-      }
-    }
-  }
-
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `` })
     createNodeField({
