@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       if (thumbnail.indexOf('/images/uploads') === 0) {
         frontmatter.thumbnail = path.relative(
           path.dirname(node.fileAbsolutePath),
-          path.join(__dirname, '/static/images/uploads', image)
+          path.join(__dirname, '/static/images/uploads', thumbnail)
         )
       }
     }
