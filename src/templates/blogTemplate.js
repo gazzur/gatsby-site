@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from '../components/layout'
 import PostImage from 'gatsby-image'
+import Button from '@material-ui/core/Button';
 
 export default ({ data }) => {
   const post = data.markdownRemark
@@ -12,6 +13,9 @@ export default ({ data }) => {
         <h1>{post.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
+      <Button variant="contained" color="primary">
+      Hello World
+    </Button>
     </Layout>   
   )
 }
