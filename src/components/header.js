@@ -1,6 +1,8 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Burger from './burger'
+
 
 const Header = ({ siteTitle }) => (
   <div
@@ -9,6 +11,7 @@ const Header = ({ siteTitle }) => (
       marginBottom: `1.45rem`,
     }}
   >
+<Burger />
     <div
       style={{
         margin: `0 auto`,
